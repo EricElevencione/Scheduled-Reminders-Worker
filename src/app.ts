@@ -3,7 +3,6 @@ import { enqueueReminder, reminderQueue } from "./queue.js";
 import { pool } from "./db.js";
 
 const app = express();
-const PORT = 3001;
 
 app.use(express.json());
 
@@ -145,6 +144,4 @@ app.get("/jobs/:id/status", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Reminder API listening on http://localhost:${PORT}`);
-});
+export { app };

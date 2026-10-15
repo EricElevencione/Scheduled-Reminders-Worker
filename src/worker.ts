@@ -46,8 +46,6 @@ const worker = new Worker<ReminderJobData>(
         [job.id, result.messageId],
       );
 
-      console.log("Test email sent:", result.messageId);
-
       return {
         success: true,
         messageId: result.messageId,

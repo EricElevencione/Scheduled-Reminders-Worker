@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "dev:worker": "tsx src/worker.ts",
-    "dev:app": "tsx src/app.ts"
+    "dev:app": "tsx src/server.ts",
+    "dev:scheduler": "tsx src/scheduler.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,16 +15,19 @@
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.5",
+    "@types/node-cron": "^3.0.11",
     "@types/nodemailer": "^8.0.2",
     "@types/pg": "^8.23.1",
     "tsx": "^4.23.15",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
   },
   "dependencies": {
     "bullmq": "^6.3.12",
     "dotenv": "^18.0.7",
     "express": "^5.3.0",
     "ioredis": "^6.0.0",
+    "node-cron": "^4.6.0",
     "nodemailer": "^10.1.0",
     "pg": "^8.23.1"
   }
